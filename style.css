@@ -1,5 +1,9 @@
 #P1 {color: blue;}
 
+body{
+    overflow-x: hidden;
+}
+
 .background1{
     background-image: url(Html\ Images/0451-08-website-background-image-levehytter.jpg);
     background-repeat: no-repeat;
@@ -46,3 +50,4 @@
     font-size: 4rem;
     font-weight: 100;
 }
+
