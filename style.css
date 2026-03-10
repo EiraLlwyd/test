@@ -1,0 +1,48 @@
+#P1 {color: blue;}
+
+.background1{
+    background-image: url(Html\ Images/0451-08-website-background-image-levehytter.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins
+}
+
+.hero{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url(Html\ Images/0451-08-website-background-image-levehytter.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.hero > h1 {
+    font-size:  4rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.timebox{
+    display: flex;
+    gap: 90px;
+}
+
+.time{
+    text-align: center
+}
+
+.time h2{
+    font-size: 4rem;
+    font-weight: 100;
+}
