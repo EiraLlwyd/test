@@ -1,33 +1,45 @@
-const Days = document.getElementById('days');
-const Hours = document.getElementById('hours');
-const Minutes = document.getElementById('minutes');
-const Seconds = document.getElementById('seconds');
+const CountInterval = 0;
 
-const targetDate = new Date("march 12 2026 00:00:00").getTime();
+const countdown = () => {
+    const countDate = new Date("march 13 2026 00:00:00").getTime()
+    const CurrentDate = new Date().getTime();
+    const gap = countDate - CurrentDate;
 
-function timer () {
-    const currentDate = new Date().getTime();
-    const distance = targetDate - currentDate; 
-
-    const days = Math.floor(distance / 1000 / 60 / 60 / 24);
-    const hours = Math.floor(distance / 1000/ 60 / 60) % 24;
-    const minutes = Math.floor(distance / 1000 / 60) % 60; 
-    const seconds = Math.floor(distance / 1000) % 60;
-
-    Days.innerHTML = days;
-    Hours.innerHTML = hours;
-    Minutes.innerHTML = minutes;
-    Seconds.innerHTML = seconds;
-
-    if(distance < 0){
-        Days.innerHTML = "00"
-        Hours.innerHTML = "00";
-        Minutes.innerHTML = "00";
-        Seconds.innerHTML = "00";
-        window.location.href = ("https://www.youtube.com")
-        window.location.replace = ("file:///C:/Users/pokey/Desktop/html/index.html")
-    }
+    if(gap <= 0){
+    clearInterval(CountInterval);
+    window.location.href = ("https://www.youtube.com")
+    return;
+    
 }
 
-setInterval(timer, 1000);
+    //math
 
+    const second = 1000;
+    const minute = second * 60;
+    const hour = minute * 60; 
+    const day = hour * 24;
+
+    //math #2
+
+    const TextDay = Math.floor(gap / day);
+    const TextHour = Math.floor((gap % day) / hour);
+    const TextMinute = Math.floor((gap % hour) / minute);
+    const TextSecond = Math.floor((gap % minute) / second);
+    
+    document.querySelector(".day").innerText = TextDay;
+    document.querySelector(".hour").innerText = TextHour;
+    document.querySelector(".minute").innerText = TextMinute;
+    document.querySelector(".second").innerText = TextSecond;
+
+    TextDay.innerHTML = day;
+
+    
+}
+
+
+
+
+setInterval(countdown, 1000)
+
+ var audio = document.getElementById("BGN");
+  audio.volume = 1;
