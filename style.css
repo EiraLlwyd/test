@@ -5,6 +5,7 @@ h2{
 
 .count-start{
     min-height: 100vh;
+    min-width: 150vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -13,11 +14,59 @@ h2{
 }
 
 .countdown{
+    font-size: 2rem;
     display: flex;
     justify-content: space-between;
     text-align: center;
 }
 
 .day,.hour,.minute,.second{
-font-size: 3rem;
+font-size: 5rem;
+}
+
+#BT1 { 
+font-size: 50px;
+align-items: center;
+position: absolute;
+top: 300px;
+left: 300px;
+background: transparent;
+border: none;
+}
+
+body, html {
+  overflow: hidden; /* Hide both vertical and horizontal scrollbars and disable scrolling */
+  height: 100%;     /* Ensure the elements take up the full screen height */
+}
+
+body {
+
+/* background-color: white; */
+
+background-color: rgb(0, 0, 0); 
+}
+
+.countdown {
+    color: white;
+}
+
+.hi{
+    color: rgb(0.5, 0.5, 0.5);
+    top: 100px;
+}
+
+#img {
+    filter: grayscale(200%) contrast(100%) brightness(5%);
+    position: absolute;
+    scale: 20%;
+    top: -250px;
+    right: 400px;
+    color: rgb(0, 0, 0);
+}
+
+/*body{
+background-image: url(image_1.png);
+background-repeat: no-repeat;
+
+
 }

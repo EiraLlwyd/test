@@ -1,7 +1,7 @@
 const CountInterval = 0;
 
 const countdown = () => {
-    const countDate = new Date("march 13 2026 00:00:00").getTime()
+    const countDate = new Date("september 24 2026 00:00:00").getTime()
     const CurrentDate = new Date().getTime();
     const gap = countDate - CurrentDate;
 
@@ -36,10 +36,4 @@ const countdown = () => {
     
 }
 
-
-
-
 setInterval(countdown, 1000)
-
- var audio = document.getElementById("BGN");
-  audio.volume = 1;
